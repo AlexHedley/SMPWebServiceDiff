@@ -1,0 +1,35 @@
+{
+    "version" : "7.1",
+    "webservices": [
+        {
+            "name" : "PatchManagement",
+            "url" : "http://localhost/altiris/PatchManagementCore/PatchWorkflowSvc.asmx",
+            "methods" : [
+                {
+                    "name" : "EnableBulletin",
+                    "parameters" : [
+                        {
+                            "name" : "bulletinGuids",
+                            "type" : "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name" : "ItemManagement",
+            "url" : "http://localhost/altiris/#.asmx",
+            "methods" : [
+                {
+                    "name" : "GetItem",
+                    "parameters" : [
+                        {
+                            "name" : "resourceGuid",
+                            "type" : "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
