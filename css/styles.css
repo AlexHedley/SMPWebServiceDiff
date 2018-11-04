@@ -32,3 +32,6 @@ del {
     -ms-user-select: none;
     user-select: none;
 }
+
+/* PivotTable */
+.pvtTotal, .pvtTotalLabel, .pvtGrandTotal {display: none}

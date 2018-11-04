@@ -22,3 +22,9 @@ https://jqueryui.com/
 
 Popper.js
 https://popper.js.org/
+
+PivotTable JS
+https://pivottable.js.org/examples/
+https://github.com/nicolaskruchten/pivottable
+https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.13.0/pivot.min.js
+https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.13.0/pivot.min.css

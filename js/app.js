@@ -65,3 +65,19 @@ myApp.controller('myController', function ($scope, $http) {
 //     changedContent: $('#changed').val(),
 //     diffContainer: ".diff1"
 // });
+
+$(function(){
+    $("#output").pivot(
+        [
+            {method: "EnableBulletin", version: "7.0"},
+            {method: "DisableBulletins", version: "7.1"},
+            {method: "EnableBulletin", version: "7.1"}
+        ],
+        {
+            rows: ["method"],
+            cols: ["version"]
+        }
+    );
+ });
+
+ // Or https://github.com/nicolaskruchten/pivottable/issues/208
