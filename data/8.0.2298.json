@@ -1,0 +1,3734 @@
+{
+  "version": "8.0.2298",
+  "webservices": [
+    {
+      "name": "CollectionManagementService.xml",
+      "url": "http://localhost/altiris/ASDK.NS/CollectionManagementService.asmx",
+      "methods": [
+        {
+          "name": "GetCollectionMembershipX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetCollectionMembershipXResponse",
+          "parameters": [
+            {
+              "name": "GetCollectionMembershipXResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetCollectionMembership",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetCollectionMembershipResponse",
+          "parameters": [
+            {
+              "name": "GetCollectionMembershipResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceCollectionX",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "description",
+              "type": "s:string"
+            },
+            {
+              "name": "folderGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "autoUpdate",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceCollectionXResponse",
+          "parameters": [
+            {
+              "name": "CreateResourceCollectionXResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceCollection",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "description",
+              "type": "s:string"
+            },
+            {
+              "name": "folderGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "autoUpdate",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceCollectionResponse",
+          "parameters": [
+            {
+              "name": "CreateResourceCollectionResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetInclusionsX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "type",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetInclusionsXResponse",
+          "parameters": [
+            {
+              "name": "GetInclusionsXResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetInclusions",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "type",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetInclusionsResponse",
+          "parameters": [
+            {
+              "name": "GetInclusionsResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetExclusionsX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "type",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetExclusionsXResponse",
+          "parameters": [
+            {
+              "name": "GetExclusionsXResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetExclusions",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "type",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetExclusionsResponse",
+          "parameters": [
+            {
+              "name": "GetExclusionsResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "AddInclusionsX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AddInclusionsXResponse"
+        },
+        {
+          "name": "AddInclusions",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AddInclusionsResponse"
+        },
+        {
+          "name": "AddExclusionsX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AddExclusionsXResponse"
+        },
+        {
+          "name": "AddExclusions",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AddExclusionsResponse"
+        },
+        {
+          "name": "RemoveInclusionsX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RemoveInclusionsXResponse"
+        },
+        {
+          "name": "RemoveInclusions",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RemoveInclusionsResponse"
+        },
+        {
+          "name": "RemoveExclusionsX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RemoveExclusionsXResponse"
+        },
+        {
+          "name": "RemoveExclusions",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RemoveExclusionsResponse"
+        },
+        {
+          "name": "SetCollectionDataSourceToRawSqlQueryX",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "sqlQuery",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetCollectionDataSourceToRawSqlQueryXResponse"
+        },
+        {
+          "name": "SetCollectionDataSourceToRawSqlQuery",
+          "parameters": [
+            {
+              "name": "collectionItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "sqlQuery",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetCollectionDataSourceToRawSqlQueryResponse"
+        },
+        {
+          "name": "UpdateCollections",
+          "parameters": [
+            {
+              "name": "collectionItemGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "UpdateCollectionsResponse"
+        },
+        {
+          "name": "ArrayOfGuid"
+        },
+        {
+          "name": "ItemDetails"
+        },
+        {
+          "name": "ArrayOfItemDetails"
+        },
+        {
+          "name": null
+        }
+      ]
+    },
+    {
+      "name": "ItemManagementService.xml",
+      "url": "http://localhost/altiris/ASDK.NS/itemManagementService.asmx",
+      "methods": [
+        {
+          "name": "ImportItemXmlFile",
+          "parameters": [
+            {
+              "name": "sourceFile",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ImportItemXmlFileResponse"
+        },
+        {
+          "name": "ImportItemXmlString",
+          "parameters": [
+            {
+              "name": "xml",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ImportItemXmlStringResponse"
+        },
+        {
+          "name": "ItemExistsX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "ItemExistsXResponse",
+          "parameters": [
+            {
+              "name": "ItemExistsXResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "ItemExists",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ItemExistsResponse",
+          "parameters": [
+            {
+              "name": "ItemExistsResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "ImportItemXmlFiles",
+          "parameters": [
+            {
+              "name": "sourceDirectory",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ImportItemXmlFilesResponse"
+        },
+        {
+          "name": "ExportItemXmlX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "outputFile",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemXmlXResponse"
+        },
+        {
+          "name": "ExportItemXml",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "outputFile",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemXmlResponse"
+        },
+        {
+          "name": "ExportItemXmlStringX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemXmlStringXResponse",
+          "parameters": [
+            {
+              "name": "ExportItemXmlStringXResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemXmlString",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemXmlStringResponse",
+          "parameters": [
+            {
+              "name": "ExportItemXmlStringResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemProfileXmlStringX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "legacyExport",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemProfileXmlStringXResponse",
+          "parameters": [
+            {
+              "name": "ExportItemProfileXmlStringXResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemProfileXmlString",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "legacyExport",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "ExportItemProfileXmlStringResponse",
+          "parameters": [
+            {
+              "name": "ExportItemProfileXmlStringResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "DeleteItemX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "DeleteItemXResponse"
+        },
+        {
+          "name": "DeleteItem",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "DeleteItemResponse"
+        },
+        {
+          "name": "CloneItemX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "newItemName",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CloneItemXResponse",
+          "parameters": [
+            {
+              "name": "CloneItemXResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "CloneItem",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "newItemName",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CloneItemResponse",
+          "parameters": [
+            {
+              "name": "CloneItemResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "MoveItemX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "destinationFolderGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "MoveItemXResponse"
+        },
+        {
+          "name": "MoveItem",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "destinationFolderGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "MoveItemResponse"
+        },
+        {
+          "name": "RenameItemX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "newName",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RenameItemXResponse"
+        },
+        {
+          "name": "RenameItem",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "newName",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RenameItemResponse"
+        },
+        {
+          "name": "CreateFolderX",
+          "parameters": [
+            {
+              "name": "folderName",
+              "type": "s:string"
+            },
+            {
+              "name": "parentFolderGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "CreateFolderXResponse",
+          "parameters": [
+            {
+              "name": "CreateFolderXResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "CreateFolder",
+          "parameters": [
+            {
+              "name": "folderName",
+              "type": "s:string"
+            },
+            {
+              "name": "parentFolderGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CreateFolderResponse",
+          "parameters": [
+            {
+              "name": "CreateFolderResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "SetItemsScheduleX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "scheduleXml",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetItemsScheduleXResponse"
+        },
+        {
+          "name": "SetItemsSchedule",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "scheduleXml",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetItemsScheduleResponse"
+        },
+        {
+          "name": "ExecuteSchedulableItemX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteSchedulableItemXResponse"
+        },
+        {
+          "name": "ExecuteSchedulableItem",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteSchedulableItemResponse"
+        },
+        {
+          "name": "GetItemByGuidX",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetItemByGuidXResponse",
+          "parameters": [
+            {
+              "name": "GetItemByGuidXResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetItemByGuid",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetItemByGuidResponse",
+          "parameters": [
+            {
+              "name": "GetItemByGuidResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsByName",
+          "parameters": [
+            {
+              "name": "itemName",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsByNameResponse",
+          "parameters": [
+            {
+              "name": "GetItemsByNameResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsInFolderX",
+          "parameters": [
+            {
+              "name": "folderGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsInFolderXResponse",
+          "parameters": [
+            {
+              "name": "GetItemsInFolderXResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsInFolder",
+          "parameters": [
+            {
+              "name": "folderGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsInFolderResponse",
+          "parameters": [
+            {
+              "name": "GetItemsInFolderResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsByType",
+          "parameters": [
+            {
+              "name": "typeName",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsByTypeResponse",
+          "parameters": [
+            {
+              "name": "GetItemsByTypeResult",
+              "type": "tns:ArrayOfItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "EnablePolicyItemX",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "EnablePolicyItemXResponse"
+        },
+        {
+          "name": "EnablePolicyItem",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "EnablePolicyItemResponse"
+        },
+        {
+          "name": "DisablePolicyItemX",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "DisablePolicyItemXResponse"
+        },
+        {
+          "name": "DisablePolicyItem",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "DisablePolicyItemResponse"
+        },
+        {
+          "name": "GetItemsByNameAndType",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "type",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetItemsByNameAndTypeResponse",
+          "parameters": [
+            {
+              "name": "GetItemsByNameAndTypeResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "RunAutomationPolicyTaskX",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "RunAutomationPolicyTaskXResponse"
+        },
+        {
+          "name": "RunAutomationPolicyTask",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RunAutomationPolicyTaskResponse"
+        },
+        {
+          "name": "boolean"
+        },
+        {
+          "name": "string"
+        },
+        {
+          "name": "ItemDetails"
+        },
+        {
+          "name": "ArrayOfItemDetails"
+        },
+        {
+          "name": "ArrayOfGuid"
+        },
+        {
+          "name": null
+        }
+      ]
+    },
+    {
+      "name": "ItemModel.xml",
+      "url": "http://localhost/altiris/nswebservice/itemmodel.asmx",
+      "methods": [
+        {
+          "name": "GetItemInfo",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetItemInfoResponse",
+          "parameters": [
+            {
+              "name": "ItemInfo",
+              "type": "tns:ItemInfo"
+            }
+          ]
+        },
+        {
+          "name": "GetActionsForItems",
+          "parameters": [
+            {
+              "name": "itemGuids",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetActionsForItemsResponse",
+          "parameters": [
+            {
+              "name": "GetActionsForItemsResult",
+              "type": "tns:ArrayOfItemActionData"
+            }
+          ]
+        },
+        {
+          "name": "GetActionsForItem",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetActionsForItemResponse",
+          "parameters": [
+            {
+              "name": "GetActionsForItemResult",
+              "type": "tns:ArrayOfItemActionData"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteCallbackActionForItems",
+          "parameters": [
+            {
+              "name": "itemActionGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "itemGuids",
+              "type": "tns:ArrayOfGuid"
+            },
+            {
+              "name": "strData",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteCallbackActionForItemsResponse",
+          "parameters": [
+            {
+              "name": "ExecuteCallbackActionForItemsResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteCallbackActionForItem",
+          "parameters": [
+            {
+              "name": "itemActionGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "strData",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteCallbackActionForItemResponse",
+          "parameters": [
+            {
+              "name": "ExecuteCallbackActionForItemResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteScheduleItem",
+          "parameters": [
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "ExecuteScheduleItemResponse"
+        },
+        {
+          "name": "GetUrlForWindowItemAction",
+          "parameters": [
+            {
+              "name": "actionGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "itemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetUrlForWindowItemActionResponse",
+          "parameters": [
+            {
+              "name": "GetUrlForWindowItemActionResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": null
+        }
+      ]
+    },
+    {
+      "name": "PatchWorkflowSvc.xml",
+      "url": "http://localhost/altiris/PatchManagementCore/PatchWorkflowSvc.asmx",
+      "methods": [
+        {
+          "name": "MyPrivileges"
+        },
+        {
+          "name": "MyPrivilegesResponse",
+          "parameters": [
+            {
+              "name": "MyPrivilegesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetProperty",
+          "parameters": [
+            {
+              "name": "guidItem",
+              "type": "s:string"
+            },
+            {
+              "name": "name",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetPropertyResponse",
+          "parameters": [
+            {
+              "name": "GetPropertyResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetProperty",
+          "parameters": [
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "value",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetPropertyResponse",
+          "parameters": [
+            {
+              "name": "SetPropertyResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "AddGuids",
+          "parameters": [
+            {
+              "name": "guidItem",
+              "type": "s:string"
+            },
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "guidList",
+              "type": "s:string"
+            },
+            {
+              "name": "setback",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "AddGuidsResponse",
+          "parameters": [
+            {
+              "name": "AddGuidsResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetProperties",
+          "parameters": [
+            {
+              "name": "guidItem",
+              "type": "s:string"
+            },
+            {
+              "name": "nameValueList",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetPropertiesResponse",
+          "parameters": [
+            {
+              "name": "SetPropertiesResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetupPreImport",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            },
+            {
+              "name": "strMiniCabDownloadUrl",
+              "type": "s:string"
+            },
+            {
+              "name": "strUserName",
+              "type": "s:string"
+            },
+            {
+              "name": "strPassword",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetupPreImportResponse",
+          "parameters": [
+            {
+              "name": "SetupPreImportResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetupWindowsPreImport",
+          "parameters": [
+            {
+              "name": "strMiniCabDownloadUrl",
+              "type": "s:string"
+            },
+            {
+              "name": "strUserName",
+              "type": "s:string"
+            },
+            {
+              "name": "strPassword",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetupWindowsPreImportResponse",
+          "parameters": [
+            {
+              "name": "SetupWindowsPreImportResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "GetPreImportStatus",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetPreImportStatusResponse",
+          "parameters": [
+            {
+              "name": "GetPreImportStatusResult",
+              "type": "s:int"
+            }
+          ]
+        },
+        {
+          "name": "GetWindowsPreImportStatus"
+        },
+        {
+          "name": "GetWindowsPreImportStatusResponse",
+          "parameters": [
+            {
+              "name": "GetWindowsPreImportStatusResult",
+              "type": "s:int"
+            }
+          ]
+        },
+        {
+          "name": "GetPreImportStatusVerbose",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetPreImportStatusVerboseResponse",
+          "parameters": [
+            {
+              "name": "GetPreImportStatusVerboseResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetWindowsPreImportStatusVerbose"
+        },
+        {
+          "name": "GetWindowsPreImportStatusVerboseResponse",
+          "parameters": [
+            {
+              "name": "GetWindowsPreImportStatusVerboseResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RunPreImport",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RunPreImportResponse",
+          "parameters": [
+            {
+              "name": "RunPreImportResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "RunWindowsPreImport"
+        },
+        {
+          "name": "RunWindowsPreImportResponse",
+          "parameters": [
+            {
+              "name": "RunWindowsPreImportResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "StopPreImport",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "StopPreImportResponse",
+          "parameters": [
+            {
+              "name": "StopPreImportResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "StopWindowsPreImport"
+        },
+        {
+          "name": "StopWindowsPreImportResponse",
+          "parameters": [
+            {
+              "name": "StopWindowsPreImportResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetupImport",
+          "parameters": [
+            {
+              "name": "softwareExcludes",
+              "type": "s:string"
+            },
+            {
+              "name": "localeIncludes",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetupImportResponse",
+          "parameters": [
+            {
+              "name": "SetupImportResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "RunTask",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            },
+            {
+              "name": "instanceName",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RunTaskResponse",
+          "parameters": [
+            {
+              "name": "RunTaskResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "IsStaged",
+          "parameters": [
+            {
+              "name": "bulletinGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsStagedResponse",
+          "parameters": [
+            {
+              "name": "IsStagedResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "GetStagedUpdates",
+          "parameters": [
+            {
+              "name": "bulletinGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetStagedUpdatesResponse",
+          "parameters": [
+            {
+              "name": "GetStagedUpdatesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetNonstagedUpdates",
+          "parameters": [
+            {
+              "name": "bulletinGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetNonstagedUpdatesResponse",
+          "parameters": [
+            {
+              "name": "GetNonstagedUpdatesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetAllStagedUpdates"
+        },
+        {
+          "name": "GetAllStagedUpdatesResponse",
+          "parameters": [
+            {
+              "name": "GetAllStagedUpdatesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "EnsureStaged",
+          "parameters": [
+            {
+              "name": "bulletinGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "sync",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "EnsureStagedResponse",
+          "parameters": [
+            {
+              "name": "EnsureStagedResult",
+              "type": "s:int"
+            }
+          ]
+        },
+        {
+          "name": "GetCustomSeverities"
+        },
+        {
+          "name": "GetCustomSeveritiesResponse",
+          "parameters": [
+            {
+              "name": "GetCustomSeveritiesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetCustomSeverityLevels"
+        },
+        {
+          "name": "GetCustomSeverityLevelsResponse",
+          "parameters": [
+            {
+              "name": "GetCustomSeverityLevelsResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetSeverityLevel",
+          "parameters": [
+            {
+              "name": "itemGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "level",
+              "type": "s:int"
+            }
+          ]
+        },
+        {
+          "name": "SetSeverityLevelResponse",
+          "parameters": [
+            {
+              "name": "SetSeverityLevelResult",
+              "type": "s:int"
+            }
+          ]
+        },
+        {
+          "name": "UpdateResourceTargets",
+          "parameters": [
+            {
+              "name": "guidProduct",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "UpdateResourceTargetsResponse",
+          "parameters": [
+            {
+              "name": "UpdateResourceTargetsResult",
+              "type": "s:int"
+            }
+          ]
+        },
+        {
+          "name": "GetTaskRunningInstances",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetTaskRunningInstancesResponse",
+          "parameters": [
+            {
+              "name": "GetTaskRunningInstancesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsTaskRunning",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsTaskRunningResponse",
+          "parameters": [
+            {
+              "name": "IsTaskRunningResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "GetTaskInstanceStatus",
+          "parameters": [
+            {
+              "name": "guidTask",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetTaskInstanceStatusResponse",
+          "parameters": [
+            {
+              "name": "GetTaskInstanceStatusResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsSoftwareUpdateDistributionRunning"
+        },
+        {
+          "name": "IsSoftwareUpdateDistributionRunningResponse",
+          "parameters": [
+            {
+              "name": "IsSoftwareUpdateDistributionRunningResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "GetDistributionTaskStatus"
+        },
+        {
+          "name": "GetDistributionTaskStatusResponse",
+          "parameters": [
+            {
+              "name": "GetDistributionTaskStatusResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetStagingTaskStatus"
+        },
+        {
+          "name": "GetStagingTaskStatusResponse",
+          "parameters": [
+            {
+              "name": "GetStagingTaskStatusResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsStagingTaskRunning"
+        },
+        {
+          "name": "IsStagingTaskRunningResponse",
+          "parameters": [
+            {
+              "name": "IsStagingTaskRunningResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "ResolveToUpdates",
+          "parameters": [
+            {
+              "name": "bulletinGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ResolveToUpdatesResponse",
+          "parameters": [
+            {
+              "name": "ResolveToUpdatesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ResolveToPolicies",
+          "parameters": [
+            {
+              "name": "bulletinGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ResolveToPoliciesResponse",
+          "parameters": [
+            {
+              "name": "ResolveToPoliciesResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CreateUpdatePolicy",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "bulletinGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "targetGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "enabled",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "CreateUpdatePolicyResponse",
+          "parameters": [
+            {
+              "name": "CreateUpdatePolicyResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "UpdateSoftwareUpdatePolicy",
+          "parameters": [
+            {
+              "name": "policyGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "enableNewAdverts",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "UpdateSoftwareUpdatePolicyResponse",
+          "parameters": [
+            {
+              "name": "UpdateSoftwareUpdatePolicyResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetSoftwareUpdatePolicyTargets",
+          "parameters": [
+            {
+              "name": "policyGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "targetGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetSoftwareUpdatePolicyTargetsResponse",
+          "parameters": [
+            {
+              "name": "SetSoftwareUpdatePolicyTargetsResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetSoftwareUpdatePolicySchedule",
+          "parameters": [
+            {
+              "name": "policyGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "installSchedule",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetSoftwareUpdatePolicyScheduleResponse",
+          "parameters": [
+            {
+              "name": "SetSoftwareUpdatePolicyScheduleResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetPluginPolicySchedules",
+          "parameters": [
+            {
+              "name": "policyGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "clientSoftwareUpdateSchedule",
+              "type": "s:string"
+            },
+            {
+              "name": "notifySchedule",
+              "type": "s:string"
+            },
+            {
+              "name": "rebootSchedule",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetPluginPolicySchedulesResponse",
+          "parameters": [
+            {
+              "name": "SetPluginPolicySchedulesResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SetPluginPolicyMessages",
+          "parameters": [
+            {
+              "name": "policyGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "turnOnNonEmpty",
+              "type": "s:boolean"
+            },
+            {
+              "name": "msgUpdatePending",
+              "type": "s:string"
+            },
+            {
+              "name": "msgUpdateProgress",
+              "type": "s:string"
+            },
+            {
+              "name": "msgRebootPending",
+              "type": "s:string"
+            },
+            {
+              "name": "msgRebootReminder",
+              "type": "s:string"
+            },
+            {
+              "name": "msgRebootNotification",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "SetPluginPolicyMessagesResponse",
+          "parameters": [
+            {
+              "name": "SetPluginPolicyMessagesResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "CreateAgentPluginPolicy",
+          "parameters": [
+            {
+              "name": "strName",
+              "type": "s:string"
+            },
+            {
+              "name": "productGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "parentFolderGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "targetGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CreateAgentPluginPolicyResponse",
+          "parameters": [
+            {
+              "name": "CreateAgentPluginPolicyResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsCleanUpAfterUpgrade71Finished"
+        },
+        {
+          "name": "IsCleanUpAfterUpgrade71FinishedResponse",
+          "parameters": [
+            {
+              "name": "IsCleanUpAfterUpgrade71FinishedResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "OperatePatchWorker",
+          "parameters": [
+            {
+              "name": "workerGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "command",
+              "type": "s:string"
+            },
+            {
+              "name": "async",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "OperatePatchWorkerResponse",
+          "parameters": [
+            {
+              "name": "OperatePatchWorkerResult",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RunPatchWorker",
+          "parameters": [
+            {
+              "name": "workerGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "async",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "RunPatchWorkerResponse",
+          "parameters": [
+            {
+              "name": "RunPatchWorkerResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "StopPatchWorker",
+          "parameters": [
+            {
+              "name": "workerGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "StopPatchWorkerResponse",
+          "parameters": [
+            {
+              "name": "StopPatchWorkerResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "RunCleanUpAfterUpgrade71"
+        },
+        {
+          "name": "RunCleanUpAfterUpgrade71Response",
+          "parameters": [
+            {
+              "name": "RunCleanUpAfterUpgrade71Result",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "GetPackageServerGuid"
+        },
+        {
+          "name": "GetPackageServerGuidResponse",
+          "parameters": [
+            {
+              "name": "GetPackageServerGuidResult",
+              "type": "s:string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ResourceManagementService.xml",
+      "url": "http://localhost/altiris/ASDK.NS/ResourceManagementService.asmx",
+      "methods": [
+        {
+          "name": "PushAltirisAgentToComputers",
+          "parameters": [
+            {
+              "name": "computerNames",
+              "type": "s:string"
+            },
+            {
+              "name": "showInStartMenu",
+              "type": "s:boolean"
+            },
+            {
+              "name": "showInSysTray",
+              "type": "s:boolean"
+            },
+            {
+              "name": "useProxy",
+              "type": "s:boolean"
+            },
+            {
+              "name": "showInAddRemove",
+              "type": "s:boolean"
+            },
+            {
+              "name": "overrideInstallPath",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "PushAltirisAgentToComputersResponse"
+        },
+        {
+          "name": "PushAltirisAgentToComputersStrict",
+          "parameters": [
+            {
+              "name": "computerNames",
+              "type": "s:string"
+            },
+            {
+              "name": "showInStartMenu",
+              "type": "s:boolean"
+            },
+            {
+              "name": "showInSysTray",
+              "type": "s:boolean"
+            },
+            {
+              "name": "useProxy",
+              "type": "s:boolean"
+            },
+            {
+              "name": "showInAddRemove",
+              "type": "s:boolean"
+            },
+            {
+              "name": "overrideInstallPath",
+              "type": "s:string"
+            },
+            {
+              "name": "userName",
+              "type": "s:string"
+            },
+            {
+              "name": "password",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "PushAltirisAgentToComputersStrictResponse"
+        },
+        {
+          "name": "GetResourceByName",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "resourceType",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceByNameResponse",
+          "parameters": [
+            {
+              "name": "GetResourceByNameResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetComputerByNameAndDomain",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "domain",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetComputerByNameAndDomainResponse",
+          "parameters": [
+            {
+              "name": "GetComputerByNameAndDomainResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetUserByUserIdAndDomain",
+          "parameters": [
+            {
+              "name": "userId",
+              "type": "s:string"
+            },
+            {
+              "name": "domain",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetUserByUserIdAndDomainResponse",
+          "parameters": [
+            {
+              "name": "GetUserByUserIdAndDomainResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassDataX",
+          "parameters": [
+            {
+              "name": "dataClass",
+              "type": "s:string"
+            },
+            {
+              "name": "resourceGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassDataXResponse",
+          "parameters": [
+            {
+              "name": "GetDataClassDataXResult",
+              "type": null
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassData",
+          "parameters": [
+            {
+              "name": "dataClass",
+              "type": "s:string"
+            },
+            {
+              "name": "resourceGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassDataResponse",
+          "parameters": [
+            {
+              "name": "GetDataClassDataResult",
+              "type": null
+            }
+          ]
+        },
+        {
+          "name": "GetResourceByContext",
+          "parameters": [
+            {
+              "name": "parameters",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceByContextResponse",
+          "parameters": [
+            {
+              "name": "GetResourceByContextResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "MergeResourceX",
+          "parameters": [
+            {
+              "name": "fromGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "toGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "MergeResourceXResponse",
+          "parameters": [
+            {
+              "name": "MergeResourceXResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "MergeResource",
+          "parameters": [
+            {
+              "name": "fromGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "toGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "MergeResourceResponse",
+          "parameters": [
+            {
+              "name": "MergeResourceResult",
+              "type": "tns:ItemDetails"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceAssociationX",
+          "parameters": [
+            {
+              "name": "resourceAssociationTypeGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "parentResourceGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "childResourceGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceAssociationXResponse"
+        },
+        {
+          "name": "CreateResourceAssociation",
+          "parameters": [
+            {
+              "name": "resourceAssociationTypeGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "parentResourceGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "childResourceGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceAssociationResponse"
+        },
+        {
+          "name": "guid"
+        },
+        {
+          "name": "ArrayOfGuid"
+        },
+        {
+          "name": "ItemDetails"
+        },
+        {
+          "name": null
+        }
+      ]
+    },
+    {
+      "name": "ResourceModel.xml",
+      "url": "http://localhost/altiris/nswebservice/resourcemodel.asmx",
+      "methods": [
+        {
+          "name": "GetLastStuctureChangeTimestamp"
+        },
+        {
+          "name": "GetLastStuctureChangeTimestampResponse",
+          "parameters": [
+            {
+              "name": "GetLastStuctureChangeTimestampResult",
+              "type": "s:dateTime"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceStructureList"
+        },
+        {
+          "name": "GetResourceStructureListResponse",
+          "parameters": [
+            {
+              "name": "GetResourceStructureListResult",
+              "type": "tns:ArrayOfResourceStructureInfo"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceStructure",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceStructureResponse",
+          "parameters": [
+            {
+              "name": "GetResourceStructureResult",
+              "type": "tns:ResourceStructure"
+            }
+          ]
+        },
+        {
+          "name": "GetRelationshipsForResourceType",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "asParent",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "GetRelationshipsForResourceTypeResponse",
+          "parameters": [
+            {
+              "name": "GetRelationshipsForResourceTypeResult",
+              "type": "tns:ArrayOfResourceRelationshipStructure"
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassesForResourceType",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassesForResourceTypeResponse",
+          "parameters": [
+            {
+              "name": "GetDataClassesForResourceTypeResult",
+              "type": "tns:ArrayOfDataClassStructure"
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassesForResourceTypeEx",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetDataClassesForResourceTypeExResponse",
+          "parameters": [
+            {
+              "name": "GetDataClassesForResourceTypeExResult",
+              "type": "tns:ArrayOfDataClassStructure"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesOfType",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesOfTypeResponse",
+          "parameters": [
+            {
+              "name": "GetResourcesOfTypeResult",
+              "type": "tns:ArrayOfResourceDataInfo"
+            }
+          ]
+        },
+        {
+          "name": "GetResource",
+          "parameters": [
+            {
+              "name": "resourceGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "dataClassTypesToFetchGUID",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceResponse",
+          "parameters": [
+            {
+              "name": "GetResourceResult",
+              "type": "tns:ResourceData"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceWithAllData",
+          "parameters": [
+            {
+              "name": "resourceGUID",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceWithAllDataResponse",
+          "parameters": [
+            {
+              "name": "GetResourceWithAllDataResult",
+              "type": "tns:ResourceData"
+            }
+          ]
+        },
+        {
+          "name": "GetResources",
+          "parameters": [
+            {
+              "name": "resourceGUIDs",
+              "type": "tns:ArrayOfGuid"
+            },
+            {
+              "name": "dataClassTypesToFetchGUIDs",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesResponse",
+          "parameters": [
+            {
+              "name": "GetResourcesResult",
+              "type": "tns:ArrayOfResourceData"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesWithFullData",
+          "parameters": [
+            {
+              "name": "resourceGUIDs",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesWithFullDataResponse",
+          "parameters": [
+            {
+              "name": "GetResourcesWithFullDataResult",
+              "type": "tns:ArrayOfResourceData"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesFromResourceGroup",
+          "parameters": [
+            {
+              "name": "resourceGroupGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "includeChildGroups",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesFromResourceGroupResponse",
+          "parameters": [
+            {
+              "name": "GetResourcesFromResourceGroupResult",
+              "type": "tns:ArrayOfResourceDataInfo"
+            }
+          ]
+        },
+        {
+          "name": "GetAssociatedParentResources",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "resourceGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "associationType",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetAssociatedParentResourcesResponse",
+          "parameters": [
+            {
+              "name": "GetAssociatedParentResourcesResult",
+              "type": "tns:ArrayOfResourceData"
+            }
+          ]
+        },
+        {
+          "name": "GetAssociatedChildResources",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "resourceGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "associationType",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetAssociatedChildResourcesResponse",
+          "parameters": [
+            {
+              "name": "GetAssociatedChildResourcesResult",
+              "type": "tns:ArrayOfResourceData"
+            }
+          ]
+        },
+        {
+          "name": "SaveDataClass",
+          "parameters": [
+            {
+              "name": "resourceGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "dataClasses",
+              "type": "tns:ArrayOfDataClassData"
+            }
+          ]
+        },
+        {
+          "name": "SaveDataClassResponse"
+        },
+        {
+          "name": "SaveDataClassLight",
+          "parameters": [
+            {
+              "name": "resourceGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "dataClasses",
+              "type": "tns:ArrayOfDataClassDataLight"
+            }
+          ]
+        },
+        {
+          "name": "SaveDataClassLightResponse"
+        },
+        {
+          "name": "SaveDataClassRowsLight",
+          "parameters": [
+            {
+              "name": "resourceGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "dataClassGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "dataRows",
+              "type": "tns:ArrayOfDataClassRowDataLight"
+            },
+            {
+              "name": "action",
+              "type": "s:string"
+            },
+            {
+              "name": "partialUpdate",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "SaveDataClassRowsLightResponse"
+        },
+        {
+          "name": "DeleteResource",
+          "parameters": [
+            {
+              "name": "resourceGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "DeleteResourceResponse"
+        },
+        {
+          "name": "RemoveDataClassFromResource",
+          "parameters": [
+            {
+              "name": "resourceGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "dataClassGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "RemoveDataClassFromResourceResponse"
+        },
+        {
+          "name": "FormAssociation",
+          "parameters": [
+            {
+              "name": "relationshipTypeGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "relationshipParentGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "relationshipChildGUIDs",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "FormAssociationResponse"
+        },
+        {
+          "name": "BreakAssociation",
+          "parameters": [
+            {
+              "name": "relationshipTypeGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "relationshipParentGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "relationshipChildGUIDs",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "BreakAssociationResponse"
+        },
+        {
+          "name": "SaveResource",
+          "parameters": [
+            {
+              "name": "resource",
+              "type": "tns:ResourceData"
+            }
+          ]
+        },
+        {
+          "name": "SaveResourceResponse"
+        },
+        {
+          "name": "CreateNewResource",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "info",
+              "type": "tns:ResourceDataInfo"
+            }
+          ]
+        },
+        {
+          "name": "CreateNewResourceResponse",
+          "parameters": [
+            {
+              "name": "CreateNewResourceResult",
+              "type": "tns:ResourceData"
+            }
+          ]
+        },
+        {
+          "name": "CreateNewResourceLight",
+          "parameters": [
+            {
+              "name": "resourceTypeGUID",
+              "type": "s1:guid"
+            },
+            {
+              "name": "info",
+              "type": "tns:ResourceDataInfo"
+            }
+          ]
+        },
+        {
+          "name": "CreateNewResourceLightResponse",
+          "parameters": [
+            {
+              "name": "CreateNewResourceLightResult",
+              "type": "tns:ResourceDataInfo"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourceToGroup",
+          "parameters": [
+            {
+              "name": "resourceGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "resourceGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourceToGroupResponse"
+        },
+        {
+          "name": "RemoveResourceFromGroup",
+          "parameters": [
+            {
+              "name": "resourceGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "resourceGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "RemoveResourceFromGroupResponse"
+        },
+        {
+          "name": "CreateAccount",
+          "parameters": [
+            {
+              "name": "accountName",
+              "type": "s:string"
+            },
+            {
+              "name": "grantRoles",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "CreateAccountResponse",
+          "parameters": [
+            {
+              "name": "CreateAccountResult",
+              "type": "tns:ResourceData"
+            }
+          ]
+        },
+        {
+          "name": "ModifyAccountRoles",
+          "parameters": [
+            {
+              "name": "accountName",
+              "type": "s:string"
+            },
+            {
+              "name": "roles",
+              "type": "tns:ArrayOfGuid"
+            },
+            {
+              "name": "action",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "ModifyAccountRolesResponse",
+          "parameters": [
+            {
+              "name": "ModifyAccountRolesResult",
+              "type": "tns:ResourceData"
+            }
+          ]
+        },
+        {
+          "name": "UpdateResourceTargets",
+          "parameters": [
+            {
+              "name": "targetGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "fullUpdate",
+              "type": "s:boolean"
+            },
+            {
+              "name": "updateDependencies",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "UpdateResourceTargetsResponse"
+        },
+        {
+          "name": "UpdateResourceTargetsAsync",
+          "parameters": [
+            {
+              "name": "targetGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "fullUpdate",
+              "type": "s:boolean"
+            },
+            {
+              "name": "updateDependencies",
+              "type": "s:boolean"
+            },
+            {
+              "name": "urgent",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "UpdateResourceTargetsAsyncResponse"
+        },
+        {
+          "name": "UpdateResourceTargetMembership",
+          "parameters": [
+            {
+              "name": "targetGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "fullUpdate",
+              "type": "s:boolean"
+            },
+            {
+              "name": "updateDependencies",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "UpdateResourceTargetMembershipResponse"
+        },
+        {
+          "name": "UpdateResourceTargetsMembership",
+          "parameters": [
+            {
+              "name": "targetGuids",
+              "type": "tns:ArrayOfGuid"
+            },
+            {
+              "name": "fullUpdate",
+              "type": "s:boolean"
+            },
+            {
+              "name": "updateDependencies",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "UpdateResourceTargetsMembershipResponse"
+        },
+        {
+          "name": null
+        }
+      ]
+    },
+    {
+      "name": "ScopingManagementService.xml",
+      "url": "http://localhost/altiris/ASDK.NS/ScopingManagementService.asmx",
+      "methods": [
+        {
+          "name": "CreateOrganizationalView",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "description",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CreateOrganizationalViewResponse",
+          "parameters": [
+            {
+              "name": "CreateOrganizationalViewResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "DeleteOrganizationalViewX",
+          "parameters": [
+            {
+              "name": "organizationalViewGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "DeleteOrganizationalViewXResponse"
+        },
+        {
+          "name": "DeleteOrganizationalView",
+          "parameters": [
+            {
+              "name": "organizationalViewGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "DeleteOrganizationalViewResponse"
+        },
+        {
+          "name": "CreateOrganizationalGroupX",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "description",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalViewGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "parentGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "CreateOrganizationalGroupXResponse",
+          "parameters": [
+            {
+              "name": "CreateOrganizationalGroupXResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "CreateOrganizationalGroup",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "s:string"
+            },
+            {
+              "name": "description",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalViewGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "parentGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CreateOrganizationalGroupResponse",
+          "parameters": [
+            {
+              "name": "CreateOrganizationalGroupResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "DeleteOrganizationalGroupX",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "DeleteOrganizationalGroupXResponse"
+        },
+        {
+          "name": "DeleteOrganizationalGroup",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "DeleteOrganizationalGroupResponse"
+        },
+        {
+          "name": "MoveOrganizationalGroupWithinOrganizationalViewX",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "parentGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "MoveOrganizationalGroupWithinOrganizationalViewXResponse"
+        },
+        {
+          "name": "MoveOrganizationalGroupWithinOrganizationalView",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "parentGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "MoveOrganizationalGroupWithinOrganizationalViewResponse"
+        },
+        {
+          "name": "GetOrganizationalViewsFolderGuid"
+        },
+        {
+          "name": "GetOrganizationalViewsFolderGuidResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalViewsFolderGuidResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalViews"
+        },
+        {
+          "name": "GetOrganizationalViewsResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalViewsResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupsFromOrganizationalViewX",
+          "parameters": [
+            {
+              "name": "organizationalViewGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupsFromOrganizationalViewXResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalGroupsFromOrganizationalViewXResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupsFromOrganizationalView",
+          "parameters": [
+            {
+              "name": "organizationalViewGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupsFromOrganizationalViewResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalGroupsFromOrganizationalViewResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupDirectMembershipX",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupDirectMembershipXResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalGroupDirectMembershipXResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupDirectMembership",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupDirectMembershipResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalGroupDirectMembershipResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupMembershipX",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupMembershipXResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalGroupMembershipXResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupMembership",
+          "parameters": [
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetOrganizationalGroupMembershipResponse",
+          "parameters": [
+            {
+              "name": "GetOrganizationalGroupMembershipResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourcesToOrganizationalGroupX",
+          "parameters": [
+            {
+              "name": "resourceItemGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourcesToOrganizationalGroupXResponse"
+        },
+        {
+          "name": "AssignResourcesToOrganizationalGroup",
+          "parameters": [
+            {
+              "name": "resourceItemGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourcesToOrganizationalGroupResponse"
+        },
+        {
+          "name": "RemoveResourcesFromOrganizationalGroupX",
+          "parameters": [
+            {
+              "name": "resourceItemGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "RemoveResourcesFromOrganizationalGroupXResponse"
+        },
+        {
+          "name": "RemoveResourcesFromOrganizationalGroup",
+          "parameters": [
+            {
+              "name": "resourceItemGuids",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "RemoveResourcesFromOrganizationalGroupResponse"
+        },
+        {
+          "name": "CreateResourceTarget",
+          "parameters": [
+            {
+              "name": "configXml",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "CreateResourceTargetResponse",
+          "parameters": [
+            {
+              "name": "CreateResourceTargetResult",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargetsX",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargetsXResponse",
+          "parameters": [
+            {
+              "name": "GetResourceTargetsXResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargets",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargetsResponse",
+          "parameters": [
+            {
+              "name": "GetResourceTargetsResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargetMembershipX",
+          "parameters": [
+            {
+              "name": "resourceTargetGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargetMembershipXResponse",
+          "parameters": [
+            {
+              "name": "GetResourceTargetMembershipXResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargetMembership",
+          "parameters": [
+            {
+              "name": "resourceTargetGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetResourceTargetMembershipResponse",
+          "parameters": [
+            {
+              "name": "GetResourceTargetMembershipResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesTargetedByPolicyX",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesTargetedByPolicyXResponse",
+          "parameters": [
+            {
+              "name": "GetResourcesTargetedByPolicyXResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesTargetedByPolicy",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "GetResourcesTargetedByPolicyResponse",
+          "parameters": [
+            {
+              "name": "GetResourcesTargetedByPolicyResult",
+              "type": "tns:ArrayOfGuid"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourceTargetsToPolicyX",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "resourceTargetsGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourceTargetsToPolicyXResponse"
+        },
+        {
+          "name": "AssignResourceTargetsToPolicy",
+          "parameters": [
+            {
+              "name": "policyItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "resourceTargetsGuids",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AssignResourceTargetsToPolicyResponse"
+        },
+        {
+          "name": "AssignRoleToOrganizationalGroupX",
+          "parameters": [
+            {
+              "name": "roleGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "AssignRoleToOrganizationalGroupXResponse",
+          "parameters": [
+            {
+              "name": "AssignRoleToOrganizationalGroupXResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "AssignRoleToOrganizationalGroup",
+          "parameters": [
+            {
+              "name": "roleGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "AssignRoleToOrganizationalGroupResponse",
+          "parameters": [
+            {
+              "name": "AssignRoleToOrganizationalGroupResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroupX",
+          "parameters": [
+            {
+              "name": "resourceItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroupXResponse",
+          "parameters": [
+            {
+              "name": "IsInOrganizationalGroupXResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroup",
+          "parameters": [
+            {
+              "name": "resourceItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroupResponse",
+          "parameters": [
+            {
+              "name": "IsInOrganizationalGroupResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroupDirectMembershipX",
+          "parameters": [
+            {
+              "name": "resourceItemGuid",
+              "type": "s1:guid"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroupDirectMembershipXResponse",
+          "parameters": [
+            {
+              "name": "IsInOrganizationalGroupDirectMembershipXResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroupDirectMembership",
+          "parameters": [
+            {
+              "name": "resourceItemGuid",
+              "type": "s:string"
+            },
+            {
+              "name": "organizationalGroupGuid",
+              "type": "s:string"
+            }
+          ]
+        },
+        {
+          "name": "IsInOrganizationalGroupDirectMembershipResponse",
+          "parameters": [
+            {
+              "name": "IsInOrganizationalGroupDirectMembershipResult",
+              "type": "s:boolean"
+            }
+          ]
+        },
+        {
+          "name": "guid"
+        },
+        {
+          "name": "ArrayOfGuid"
+        },
+        {
+          "name": "boolean"
+        },
+        {
+          "name": null
+        }
+      ]
+    },
+    {
+      "name": "TaskServerModel.xml",
+      "url": "http://localhost/altiris/nswebservice/taskservermodel.asmx",
+      "methods": [
+        {
+          "name": "GetTasksByType",
+          "parameters": [
+            {
+              "name": "taskTypeGuid",
+              "type": "s1:guid"
+            }
+          ]
+        },
+        {
+          "name": "GetTasksByTypeResponse",
+          "parameters": [
+            {
+              "name": "GetTasksByTypeResult",
+              "type": "tns:ArrayOfTaskInfo"
+            }
+          ]
+        },
+        {
+          "name": "GetTaskTypes"
+        },
+        {
+          "name": "GetTaskTypesResponse",
+          "parameters": [
+            {
+              "name": "GetTaskTypesResult",
+              "type": "tns:ArrayOfTaskTypeInfo"
+            }
+          ]
+        },
+        {
+          "name": null
+        }
+      ]
+    }
+  ]
+}

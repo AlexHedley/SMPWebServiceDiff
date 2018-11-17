@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta name="description" content="SMP WebServices Diff Tool">
+    <meta name="keywords" content="SMP, ITMS, Symantec, WebService, Web Service, Diff">
+    <meta name="author" content="Alex Hedley">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -16,7 +19,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <!-- <link rel="shortcut icon" href="altiris.ico"> -->
 
-    <title>SMP</title>
+    <title>SMP - Web Services Diff</title>
   </head>
   <body ng-app="myApp">
 
@@ -28,72 +31,112 @@
             <img style="padding-top: 10px;" alt="" src="images/symantecLogo.png">
         </div>
 
-        <h1>SMP</h1>
-        <h2>WebServices Diff</h2>
-
         <div class="container">
 
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Original text</h4>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                
+                <!-- Panel 1 -->
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Compare
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        
+                        <!--Row [Start]-->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>Original text</h4>
+    
+                                <select 
+                                    ng-model="selectedFileLHS"    
+                                    ng-change="loadFile('LHS')">
+                                    <option ng-repeat="file in files" value="{{file}}">{{file}}</option>
+                                </select>
+    
+                                <select
+                                    ng-model="selectedWebServiceLHS"    
+                                    ng-change="loadMethods('LHS')"
+                                    ng-options="webservice.name for webservice in webservicesLHS">
+                                    <!-- <option ng-repeat="webservice in webservicesLHS">{{webservice.name}}</option> -->
+                                </select>
+    
+                                <!-- <div class="original">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only centuries, but also the leap into electronic typesetting.</div> -->
+                                <textarea layout-fill class="form-control diff-textarea" id="original"
+                                    ng-model="original"></textarea>
+                                    <!-- ng-list="&#10;" ng-trim="false" -->
+                            </div>
+                            <div class="col-md-4">
+                                <h4>Changed text</h4>
+    
+                                <select 
+                                    ng-model="selectedFileRHS"    
+                                    ng-change="loadFile('RHS')">
+                                    <option ng-repeat="file in files" value="{{file}}">{{file}}</option>
+                                </select>
+    
+                                <select
+                                    ng-model="selectedWebServiceRHS"    
+                                    ng-change="loadMethods('RHS')"
+                                    ng-options="webservice.name for webservice in webservicesRHS"></select>
+                                    <!-- <option ng-repeat="webservice in webservicesRHS">{{webservice.name}}</option> -->
+                                </select>
+    
+                                <!-- <div class="changed">Lorem Ipsum is simply typesetting dummy text of the printing and has been the industry's typesetting. Lorem Ipsum has been the industry's standard dummy text ever the 1500s, when an printer took a galley of type and simply it to make a type. It has survived not only five centuries, but survived not also the leap into electronic typesetting.</div> -->
+                                <textarea layout-fill class="form-control diff-textarea" id="changed"
+                                    ng-model="changed" ></textarea>
+                                    <!-- ng-list="&#10;" ng-trim="false" -->
+    
+                            </div>
+                            <div class="col-md-4">
+                                <h4>Diff results</h4>
+    
+                                <div class="diff">
+                                    <pre class="textdiff" diff left-obj="original" right-obj="changed">a</pre>
+                                    <!-- <pre class="textdiff" processing-diff left-obj="original" right-obj="changed" options="options">b</pre> -->
+                                    <!-- <pre class="textdiff" semantic-diff left-obj="original" right-obj="changed" options="options">c</pre> -->
+                                    <!-- <pre class="textdiff" line-diff left-obj="original" right-obj="changed" options="options">d</pre> -->        
+                                </div>
+                            </div>
+                        </div>
+                        <!--Row [End]-->
 
-                    <select 
-                        ng-model="selectedFileLHS"    
-                        ng-change="loadFile('LHS')">
-                        <option ng-repeat="file in files" value="{{file}}">{{file}}</option>
-                    </select>
-
-                    <select
-                        ng-model="selectedWebServiceLHS"    
-                        ng-change="loadMethods('LHS')"
-                        ng-options="webservice.name for webservice in webservicesLHS">
-                        <!-- <option ng-repeat="webservice in webservicesLHS">{{webservice.name}}</option> -->
-                    </select>
-
-                    <!-- <div class="original">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only centuries, but also the leap into electronic typesetting.</div> -->
-                    <textarea layout-fill class="form-control diff-textarea" id="original"
-                        ng-model="original"></textarea>
-                        <!-- ng-list="&#10;" ng-trim="false" -->
-                </div>
-                <div class="col-md-4">
-                    <h4>Changed text</h4>
-
-                    <select 
-                        ng-model="selectedFileRHS"    
-                        ng-change="loadFile('RHS')">
-                        <option ng-repeat="file in files" value="{{file}}">{{file}}</option>
-                    </select>
-
-                    <select
-                        ng-model="selectedWebServiceRHS"    
-                        ng-change="loadMethods('RHS')"
-                        ng-options="webservice.name for webservice in webservicesRHS"></select>
-                        <!-- <option ng-repeat="webservice in webservicesRHS">{{webservice.name}}</option> -->
-                    </select>
-
-                    <!-- <div class="changed">Lorem Ipsum is simply typesetting dummy text of the printing and has been the industry's typesetting. Lorem Ipsum has been the industry's standard dummy text ever the 1500s, when an printer took a galley of type and simply it to make a type. It has survived not only five centuries, but survived not also the leap into electronic typesetting.</div> -->
-                    <textarea layout-fill class="form-control diff-textarea" id="changed"
-                        ng-model="changed" ></textarea>
-                        <!-- ng-list="&#10;" ng-trim="false" -->
-
-                </div>
-                <div class="col-md-4">
-                    <h4>Diff results</h4>
-
-                    <div class="diff">
-                        <pre class="textdiff" diff left-obj="original" right-obj="changed">a</pre>
-                        <!-- <pre class="textdiff" processing-diff left-obj="original" right-obj="changed" options="options">b</pre> -->
-                        <!-- <pre class="textdiff" semantic-diff left-obj="original" right-obj="changed" options="options">c</pre> -->
-                        <!-- <pre class="textdiff" line-diff left-obj="original" right-obj="changed" options="options">d</pre> -->        
                     </div>
+                  </div>
                 </div>
-            </div>
-            <!--Row [End]-->
+                <!-- Panel 1 -->
 
-            <div class="row">
-                <div id="output" style="margin: 30px;"></div>
+                <!-- Panel 2 -->
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Pivot
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        
+                        <!--Row [Start]-->
+                        <div class="row">
+                            <div id="output" style="margin: 30px;">
+                                <p>Select content...</p>
+                            </div>
+                        </div>
+                        <!--Row [End]-->
+
+                    </div>
+                  </div>
+                </div>
+                <!-- Panel 2 -->
+
             </div>
-            <!--Row [End]-->
+            <!-- panel-group -->
             
         </div>
         <!--Container [End]-->
@@ -104,7 +147,7 @@
     <script src="js/jquery-3.3.1.min.js" ></script>
     <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/diff_match_patch.js"></script>
     <!-- <script src="js/jquery.pretty-text-diff.min.js"></script> -->
