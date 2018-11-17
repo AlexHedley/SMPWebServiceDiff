@@ -37,8 +37,7 @@ myApp.controller('myController', function ($scope, $http) {
         }
       };
 
-    //$scope.files = ['7.0', '7.1', '7.5', '7.6', '8.0', '8.1', '8.5'];
-    $scope.files = ['7.0', '7.1', '8.1.5811.0', '8.5.3025.0'];
+    $scope.files = ['7.1.8280', '8.0.2298', '8.1.5811.0', '8.5.3025.0'];
     $scope.selectedFileLHS = '';
     $scope.selectedFileRHS = '';
 
