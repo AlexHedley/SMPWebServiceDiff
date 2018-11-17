@@ -1,23 +1,5 @@
 var myApp = angular.module('myApp',['diff-match-patch']);
-myApp.controller('myController', function ($scope, $http) {   
-
-    createPivot = () => {
-        if ($scope.webservicesLHS && $scope.webservicesRHS) {
-            var methodsLHS = $scope.selectedWebServiceLHS.methods.map(m => m.name); //$scope.original
-            var dataLHS = methodsLHS.map(m => ({method: m, version: $scope.selectedFileLHS}));
-            var methodsRHS = $scope.selectedWebServiceRHS.methods.map(m => m.name); //$scope.changed
-            var dataRHS = methodsRHS.map(m => ({method: m, version: $scope.selectedFileRHS}));
-            var data = dataLHS.concat(dataRHS);
-            
-            $("#output").pivot(
-                data,
-                {
-                    rows: ["method"],
-                    cols: ["version"]
-                }
-            );
-        }
-    };
+myApp.controller('myController', function ($scope, $http, $q, $filter) {   
 
     $scope.options = {
         editCost: 4,
@@ -36,9 +18,8 @@ myApp.controller('myController', function ($scope, $http) {
           }
         }
       };
-
-    //$scope.files = ['7.0', '7.1', '7.5', '7.6', '8.0', '8.1', '8.5'];
-    $scope.files = ['7.0', '7.1', '8.1.5811.0', '8.5.3025.0'];
+    
+    $scope.files = ['7.1.8280', '8.0.2298', '8.1.5811.0', '8.5.3025.0'];
     $scope.selectedFileLHS = '';
     $scope.selectedFileRHS = '';
 
@@ -47,6 +28,14 @@ myApp.controller('myController', function ($scope, $http) {
 
     $scope.original = {};
     $scope.changed = {};
+
+    $scope.data = {};
+    $scope.allData = {};
+    $scope.webservices = [];
+
+    $scope.init = function () {
+        getData();
+    }
 
     $scope.loadFile = (side) => {
         var file = '';
@@ -69,33 +58,91 @@ myApp.controller('myController', function ($scope, $http) {
 
     $scope.loadMethods = (side) => {
         if (side === 'LHS') {
-            $scope.original = $scope.selectedWebServiceLHS.methods.map(m => m.name).join('\n');
+            if ($scope.selectedWebServiceLHS) {
+                $scope.original = $scope.selectedWebServiceLHS.methods.map(m => m.name).join('\n');
+            }
         } else {
-            $scope.changed = $scope.selectedWebServiceRHS.methods.map(m => m.name).join('\n');
+            if ($scope.selectedWebServiceRHS) {
+                $scope.changed = $scope.selectedWebServiceRHS.methods.map(m => m.name).join('\n');
+            }
         }
-
-        createPivot();
+        //createPivot();
     };
+
+    createPivot = () => {
+        if ($scope.webservicesLHS && $scope.webservicesRHS) {
+            var methodsLHS = $scope.selectedWebServiceLHS.methods.map(m => m.name);
+            var dataLHS = methodsLHS.map(m => ({method: m, version: $scope.selectedFileLHS}));
+            var methodsRHS = $scope.selectedWebServiceRHS.methods.map(m => m.name);
+            var dataRHS = methodsRHS.map(m => ({method: m, version: $scope.selectedFileRHS}));
+            var data = dataLHS.concat(dataRHS);
+            
+            $("#output").pivot(
+                data,
+                {
+                    rows: ["method"],
+                    cols: ["version"]
+                }
+            );
+        }
+    };
+
+    getData = () => {
+        var files = [];
+        angular.forEach($scope.files, function(value, key) {
+            var file = `data/${value}.json`;
+            files.push(file);
+        });
+        
+        var promises = [];
+        angular.forEach(files, function(value, key) {
+            var promise = $http.get(value);
+             promises.push(promise);
+        });
+
+        var data = {};
+        var x = [];
+        $q.all(promises).then(function(response) {
+            var result = response.map(r => r.data);
+            angular.forEach(result, function(version, key) {
+                angular.forEach(version.webservices, function(value, key) {
+                    var methods = value.methods.map(m => m.name);
+                    var wsData = methods.map(m => ({webservice:value.name, version: version.version, method: m}));
+                    x.push(wsData);
+                });
+                const values = Object.keys(data).map(it => data[it]);
+                angular.extend(data, values);
+            });
+
+            var merged = [].concat.apply([], x);
+            $scope.webservices = [...new Set(merged.map(a => a.webservice))].sort();
+            $scope.allData = merged;
+        });
+    }
+
+    $scope.createPivotAll = () => {
+        console.log('a');
+        // var filteredData = $scope.allData;
+        var filteredData = $filter('filter')($scope.allData, { webservice: $scope.selectedWebService });
+        var mapped = filteredData.map(m => ({webservice:m.webservice, version: m.version, method: m.method}));
+        
+        if ($scope.ui) {
+            $("#output").pivotUI(
+                mapped,
+                {
+                    rows: ["method"],
+                    cols: ["version"]
+                }
+            );
+        } else {
+            $("#output").pivot(
+                mapped,
+                {
+                    rows: ["method"],
+                    cols: ["version"]
+                }
+            );
+        }
+    }
+    $scope.init();
 });
-
-// $(".diff-wrapper").prettyTextDiff({
-//     originalContent: $('#original').val(),
-//     changedContent: $('#changed').val(),
-//     diffContainer: ".diff1"
-// });
-
-// $(function(){
-//     $("#output").pivot(
-//         [
-//             {method: "EnableBulletin", version: "7.0"},
-//             {method: "DisableBulletins", version: "7.1"},
-//             {method: "EnableBulletin", version: "7.1"}
-//         ],
-//         {
-//             rows: ["method"],
-//             cols: ["version"]
-//         }
-//     );
-//  });
-
- // Or https://github.com/nicolaskruchten/pivottable/issues/208

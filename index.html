@@ -124,6 +124,25 @@
                         
                         <!--Row [Start]-->
                         <div class="row">
+                            <div class="col-md-6">
+                                <select
+                                    ng-model="selectedWebService"    
+                                    ng-change="createPivotAll()"
+                                    ng-options="webservice for webservice in webservices">
+                                    <!-- <option ng-repeat="webservice in webservicesLHS">{{webservice.name}}</option> -->
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="ui" ng-model="ui" ng-change="createPivotAll()">
+                                    <label class="form-check-label" for="ui">UI</label>
+                                </div>
+                            </div>
+                        </div>  
+                        <!--Row [End]-->
+
+                        <!--Row [Start]-->
+                        <div class="row">
                             <div id="output" style="margin: 30px;">
                                 <p>Select content...</p>
                             </div>
