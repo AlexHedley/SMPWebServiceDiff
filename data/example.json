@@ -1,0 +1,20 @@
+{
+    "version": "MAJOR.MINOR.PATCH",
+    "webservices": [
+    {
+        "name": "Service.xml",
+        "url": "http://localhost/altiris/ASDK.NS/Service.asmx",
+        "methods": [
+        {
+          "name": "MethodName",
+          "parameters": [
+            {
+              "name": "parameterName",
+              "type": "s1:guid"
+            }
+          ]
+        }
+        ]
+    }
+    ]
+}
