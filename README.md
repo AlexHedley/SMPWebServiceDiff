@@ -12,7 +12,7 @@
 
 ---
 
-Example Site: [https://alexhedley.github.io/SMPWebServiceDiff/](https://alexhedley.github.io/SMPWebServiceDiff/)
+Example Site: [https://protirus.github.io/SMPWebServiceDiff/](https://protirus.github.io/SMPWebServiceDiff/)
 
 ---
 
