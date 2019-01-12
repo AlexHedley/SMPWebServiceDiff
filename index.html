@@ -33,6 +33,14 @@
 
         <div class="container">
 
+            <div class="row">
+                <div class="col-md-12">
+                    <p>The following Application has been built to allow a diff of SMP Webservice Methods.</p>
+                    <p>You can either compare WebService methods, compare params for a given method or Pivot the Webservices.</p>
+                    <p>Click on the headings ("Compare", "Params", "Pivot") to toggle the options.</p>
+                </div>
+            </div>
+
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 
                 <!-- Panel 1 -->
@@ -49,6 +57,10 @@
                         
                         <!--Row [Start]-->
                         <div class="row">
+                            <div class="col-md-12">
+                                <p>Pick a version then a webservice, repeat with a different version, this will list all Methods then a diff.</p>
+                            </div>
+                            
                             <div class="col-md-4">
                                 <h4>Original text</h4>
     
@@ -57,6 +69,7 @@
                                     ng-change="loadFile('LHS')">
                                     <option ng-repeat="file in files" value="{{file}}">{{file}}</option>
                                 </select>
+                                <label>{{$scope.files.length}}</label>
     
                                 <select
                                     ng-model="selectedWebServiceLHS"    
@@ -64,10 +77,12 @@
                                     ng-options="webservice.name for webservice in webservicesLHS">
                                     <!-- <option ng-repeat="webservice in webservicesLHS">{{webservice.name}}</option> -->
                                 </select>
+                                <label>{{$scope.webservicesLHS.length}}</label>
     
                                 <!-- <div class="original">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only centuries, but also the leap into electronic typesetting.</div> -->
                                 <textarea layout-fill class="form-control diff-textarea" id="original"
                                     ng-model="original"></textarea>
+                                <label>{{$scope.original.length}}</label>
                                     <!-- ng-list="&#10;" ng-trim="false" -->
                             </div>
                             <div class="col-md-4">
@@ -110,6 +125,52 @@
                 </div>
                 <!-- Panel 1 -->
 
+                <!-- Panel - Params -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingParams">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseParams" aria-expanded="false" aria-controls="collapseParams">
+                                Params
+                              </a>
+                        </h4>
+                    </div>
+                    <div id="collapseParams" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingParams">
+                        <div class="panel-body">
+                            
+                            <!--Row [Start]-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p><strong>Choose a Method for a given Web Service to see the params in each version.</strong></p>
+        
+                                    <select 
+                                        ng-model="chosenWebService"
+                                        ng-change="loadChosenMethods()"
+                                        ng-options="webservice for webservice in webservices">
+                                    </select>
+        
+                                    <select
+                                        ng-model="chosenWebServiceMethod"
+                                        ng-change="loadChosenParams()" 
+                                        ng-options="method for method in methods">
+                                    </select>
+
+                                    <div ng-repeat="method in methodParams">
+                                        {{method.version}}
+                                        <ul>
+                                            <li ng-repeat="param in method.params">{{param.name}} : {{param.type}}</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                            <!--Row [End]-->
+    
+                        </div>
+                      </div>
+                </div>
+                <!-- Panel - Params -->
+
                 <!-- Panel 2 -->
                 <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingTwo">
@@ -124,6 +185,11 @@
                         
                         <!--Row [Start]-->
                         <div class="row">
+
+                            <div class="col-md-12">
+                                <p>Pick a webservice to display a pivot of Methods for each version, toggle "UI" to add extra functionality.</p>
+                            </div>
+
                             <div class="col-md-6">
                                 <select
                                     ng-model="selectedWebService"    
@@ -176,7 +242,6 @@
     <script src="js/angular-diff-match-patch.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.13.0/pivot.min.js"></script> -->
     <script src="js/pivot.min.js"></script>
-    <!-- <script src="js/script.js"></script> -->
     <script src="js/app.js"></script>
     <!-- <script>hljs.initHighlightingOnLoad();</script> -->
   </body>

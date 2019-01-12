@@ -25,6 +25,8 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
 
     $scope.selectedWebServiceLHS = {};
     $scope.selectedWebServiceRHS = {};
+    $scope.chosenWebService = {};
+    $scope.chosenWebServiceMethod = {};
 
     $scope.original = {};
     $scope.changed = {};
@@ -32,6 +34,8 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
     $scope.data = {};
     $scope.allData = {};
     $scope.webservices = [];
+    $scope.methods = [];
+    $scope.methodParams = [];
 
     $scope.init = function () {
         getData();
@@ -67,6 +71,28 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
             }
         }
         //createPivot();
+    };
+
+    $scope.loadChosenMethods = () => {
+        var methods = [];
+        angular.forEach($scope.allData, function(value, key) {
+            if (value.webservice == $scope.chosenWebService) {
+                methods.push(value);
+            }
+        });
+
+        //$scope.methods = methods.filter((v, i, a) => a.indexOf(v) === i);
+        $scope.methods = [...new Set(methods.map(s => s.method))];
+    };
+
+    $scope.loadChosenParams = () => {
+        var methodParams = [];
+        angular.forEach($scope.allData, function(value, key) {
+            if (value.method == $scope.chosenWebServiceMethod && value.webservice == $scope.chosenWebService) {
+                methodParams.push(value);
+            }
+        });
+        $scope.methodParams = methodParams;
     };
 
     createPivot = () => {
@@ -106,8 +132,9 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
             var result = response.map(r => r.data);
             angular.forEach(result, function(version, key) {
                 angular.forEach(version.webservices, function(value, key) {
-                    var methods = value.methods.map(m => m.name);
-                    var wsData = methods.map(m => ({webservice:value.name, version: version.version, method: m}));
+                    //var methods = value.methods.map(m => m.name);
+                    var methods = value.methods.map(m => ({name: m.name, params: m.parameters }));
+                    var wsData = methods.map(m => ({webservice:value.name, version: version.version, method: m.name, params: m.params}));
                     x.push(wsData);
                 });
                 const values = Object.keys(data).map(it => data[it]);
@@ -121,7 +148,6 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
     }
 
     $scope.createPivotAll = () => {
-        console.log('a');
         // var filteredData = $scope.allData;
         var filteredData = $filter('filter')($scope.allData, { webservice: $scope.selectedWebService });
         var mapped = filteredData.map(m => ({webservice:m.webservice, version: m.version, method: m.method}));
