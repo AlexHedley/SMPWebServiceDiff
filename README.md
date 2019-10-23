@@ -1,12 +1,19 @@
 # SMP WebService Diff
 
-![](https://img.shields.io/badge/language-powershell-blue.svg)
-![](https://img.shields.io/badge/language-html-purple.svg)
-![](https://img.shields.io/badge/language-css-purple.svg)
-![](https://img.shields.io/badge/language-javascript-purple.svg)
+[![Language: PowerShell](https://img.shields.io/badge/language-powershell-blue.svg)](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6)
+[![Language: HTML](https://img.shields.io/badge/language-html-purple.svg)](https://www.w3.org/html/)
+[![Language: CSS](https://img.shields.io/badge/language-css-purple.svg)](https://www.w3.org/Style/CSS/)
+[![Language: JS](https://img.shields.io/badge/language-javascript-purple.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+|
 ![](https://img.shields.io/badge/tag-smp-yellow.svg)
 ![](https://img.shields.io/badge/tag-symantec-yellow.svg)
 ![](https://img.shields.io/badge/tag-webservice-yellow.svg)
+|
+[![GitHub contributors](https://img.shields.io/github/contributors/Protirus/SMPWebServiceDiff.svg)](https://GitHub.com/Protirus/SMPWebServiceDiff/graphs/contributors/)
+|
+[![GitHub issues](https://img.shields.io/github/issues/Protirus/SMPWebServiceDiff.svg)](https://GitHub.com/Protirus/SMPWebServiceDiff/issues/)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/Protirus/SMPWebServiceDiff.svg)](https://GitHub.com/Protirus/SMPWebServiceDiff/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/Protirus/SMPWebServiceDiff.svg)](https://GitHub.com/Protirus/SMPWebServiceDiff/pull/)
 
 ![SMP](images/smp.png) SMP WebService Diff Tool has been created to show a quick and easy difference between versions of the SMP. When a new version is released follow the setup and create a new `json` file, add it to the app and now you can see new WS methods.
 
