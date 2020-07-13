@@ -19,7 +19,7 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
         }
       };
     
-    $scope.files = ['7.1.8280', '8.0.2298', '8.1.5811.0', '8.5.3025.0', '8.5.4249', '8.5.5032'];
+    $scope.files = ['7.1.8280', '8.0.2298', '8.1.5811.0', '8.5.3025.0', '8.5.4249', '8.5.5032', '8.5.5713'];
     $scope.selectedFileLHS = '';
     $scope.selectedFileRHS = '';
 
